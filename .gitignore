@@ -1,0 +1,6 @@
+/config/database.yml
+/log/*
+/mkmf.log
+/nbproject
+/public/system
+/tmp/*
