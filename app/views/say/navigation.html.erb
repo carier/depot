@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Rails Navigation</title>
+  </head>
+  <body>
+    <h1>Show directory files!</h1>
+    <ul>
+      <% for file in @files -%>
+      <li><%= file %></li>
+      <% end -%>
+    </ul>
+  </body>
+</html>
