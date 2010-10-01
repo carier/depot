@@ -8,6 +8,14 @@ h1 {
 
 /* Styles for main page */
 
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0 ;
+  font: bold smaller sans-serif;
+}
+
 #banner {
   background: #9c9 ;
   padding-top: 10px;
@@ -183,4 +191,17 @@ h1 {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+/* Styles for the cart in the main page */
+
+.cart-title {
+  font: 120% bold;
+}
+.item-price, .total-line {
+  text-align: right;
+}
+.total-line .total-cell {
+  font-weight: bold;
+  border-top: 1px solid #595 ;
 }
