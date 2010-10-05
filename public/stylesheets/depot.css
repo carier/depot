@@ -208,12 +208,12 @@ h1 {
 
 /* Styles for the cart in the sidebar */
 
-#ca rt, #ca rt table {
+#cart, #cart table {
   font-size: smaller;
   color:
   white;
 }
-#ca rt table {
+#cart table {
   border-top:
   1px dotted #595 ;
   border-bottom: 1px dotted #595 ;

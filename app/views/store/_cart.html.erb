@@ -1,3 +1,5 @@
+<% unless cart.items.empty? %>
+
 <div class="cart-title">Your Cart</div>
 <table>
   <%= render(:partial => "cart_item" , :collection => cart.items) %>
@@ -7,4 +9,8 @@
   </tr>
 </table>
 
-<%= button_to "Empty cart" , :action => :empty_cart %>
+<% form_remote_tag :url => { :action => :empty_cart } do %>
+  <%= submit_tag "Empty cart" %>
+<% end %>
+
+<% end %>
