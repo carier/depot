@@ -3,6 +3,11 @@
 <% else %>
 <tr>
 <% end %>
+  <td>
+    <% form_remote_tag :url => { :action => 'remove_from_cart', :id => cart_item.product } do %>
+      <%= submit_tag "-" %>
+    <% end %>
+  </td>
   <td><%= cart_item.quantity %>&times;</td>
   <td><%=h cart_item.title %></td>
   <td class="item-price"><%= number_to_currency(cart_item.price) %></td>

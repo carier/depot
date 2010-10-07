@@ -11,7 +11,7 @@
       <span class="price" ><%= number_to_currency(product.price, :unit => "&pound;" ,
                                                                  :separator => "," , :delimiter => "" ) %></span>
       <% form_remote_tag :url => { :action => 'add_to_cart', :id => product } do %>
-        <%= submit_tag "Add to Cart" %>
+        <%= image_submit_tag "addToCart.gif", :title => "Add to Cart" %>
       <% end %>
 
     </div>

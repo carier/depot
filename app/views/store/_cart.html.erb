@@ -4,7 +4,7 @@
 <table>
   <%= render(:partial => "cart_item" , :collection => cart.items) %>
   <tr class="total-line">
-    <td colspan="2">Total</td>
+    <td colspan="3">Total</td>
     <td class="total-cell"><%= number_to_currency(cart.total_price) %></td>
   </tr>
 </table>
