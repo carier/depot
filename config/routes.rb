@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :payment_types
+
   map.resources :users
 
   map.resources :line_items

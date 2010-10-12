@@ -19,7 +19,7 @@
         <%= form.label :pay_type, "Pay with:" %>
         <%=
           form.select :pay_type,
-          Order::PAYMENT_TYPES,
+          Order::get_payment_types,
           :prompt => "Select a payment method"
           %>
       </div>
