@@ -3,6 +3,7 @@ class AdminController < ApplicationController
     if request.post?
       user = User.authenticate(params[:name], params[:password])
       if user
+        session[:is_first] = nil
         session[:user_id] = user.id
         uri = session[:original_uri]
         session[:original_uri] = nil
