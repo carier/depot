@@ -1,7 +1,7 @@
 <% if @counter > 5 -%>
 <div id="notice">You visit this page <%= pluralize(@counter, "time") %></div>
 <% end -%>
-<h1>Your Pragmatic Catalog</h1>
+<h1><% I18n.t 'main.title' %></h1>
 <% for product in @products -%>
   <div class="entry">
     <%= link_to image_tag(product.image_url), :method => :post %>
@@ -11,7 +11,7 @@
       <span class="price" ><%= number_to_currency(product.price, :unit => "&pound;" ,
                                                                  :separator => "," , :delimiter => "" ) %></span>
       <% form_remote_tag :url => { :action => 'add_to_cart', :id => product } do %>
-        <%= image_submit_tag "addToCart.gif", :title => "Add to Cart" %>
+        <%= image_submit_tag "addToCart.gif", :title => I18n.t('main.button.add') %>
       <% end %>
 
     </div>
