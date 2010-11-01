@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   has_many :line_items
 
   def self.find_products_for_sale
-    find(:all, :order => "title" )
+    find(:all, :order => "title", :conditions => {:locale => "#{I18n.locale}"} )
   end
 
   validates_presence_of :title, :description, :image_url
