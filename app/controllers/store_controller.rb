@@ -67,6 +67,15 @@ class StoreController < ApplicationController
     @order.add_line_items_from_cart(@cart)
     @action = 'checkout';
     if @order.save
+      gateway = PaymentGateway.new
+
+      response = gateway.collect(:login => 'username' ,
+        :password => 'password' ,
+        :amount => @cart.total_price,
+        :card_number => @order.card_number,
+        :expiration => @order.card_expiration,
+        :name => @order.name)
+
       session[:cart] = nil
       redirect_to_index(I18n.t('flash.thanks' ) )
     else
